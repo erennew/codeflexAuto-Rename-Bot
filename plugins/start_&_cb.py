@@ -7,7 +7,8 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, 
 from helper.database import codeflixbots
 from config import *
 from config import Config
-
+from collections import defaultdict
+from typing import Dict, Any
 logger = logging.getLogger(__name__)
 
 # Constants
@@ -25,7 +26,63 @@ I'm using this awesome file renaming bot with these features:
 
 Join me using this link: {invite_link}
 """
+# Global state tracker
+metadata_states: Dict[int, Dict[str, Any]] = {}
+metadata_waiting = defaultdict(dict)
+set_metadata_state = {}  # Global state tracker
 
+METADATA_ON = [
+    [InlineKeyboardButton('Metadata Enabled', callback_data='metadata_1'),
+     InlineKeyboardButton('✅', callback_data='metadata_1')],
+    [InlineKeyboardButton('Set Custom Metadata', callback_data='set_metadata'),
+     InlineKeyboardButton('Back', callback_data='help')]
+]
+
+METADATA_OFF = [
+    [InlineKeyboardButton('Metadata Disabled', callback_data='metadata_0'),
+     InlineKeyboardButton('❌', callback_data='metadata_0')],
+    [InlineKeyboardButton('Set Custom Metadata', callback_data='set_metadata'),
+     InlineKeyboardButton('Back', callback_data='help')]
+]
+
+@Client.on_message(filters.private & filters.text & ~filters.command(['start']))
+async def process_metadata_text(client, message: Message):
+    user_id = message.from_user.id
+    
+    # Check if user is in metadata state and the message isn't a command
+    if user_id in metadata_states and not message.text.startswith('/'):
+        try:
+            if message.text.lower() == "/cancel":
+                await message.reply("🚫 Metadata update cancelled", 
+                                reply_markup=InlineKeyboardMarkup(
+                                    [[InlineKeyboardButton("Back to Metadata", callback_data="meta")]]
+                                ))
+            else:
+                await hyoshcoder.set_metadata_code(user_id, message.text)
+                bool_meta = await hyoshcoder.get_metadata(user_id)
+                
+                await message.reply(
+                    f"✅ <b>Success!</b>\nMetadata set to:\n<code>{message.text}</code>",
+                    reply_markup=InlineKeyboardMarkup(METADATA_ON if bool_meta else METADATA_OFF)
+                )
+                
+            metadata_states.pop(user_id, None)
+            
+        except Exception as e:
+            await message.reply(f"❌ Error: {str(e)}")
+            metadata_states.pop(user_id, None)
+    else:
+        # Let other handlers process the message
+        message.continue_propagation()
+
+async def cleanup_metadata_states():
+    while True:
+        await asyncio.sleep(300)  # Clean every 5 minutes
+        current_time = time.time()
+        expired = [uid for uid, state in metadata_states.items() 
+                    if current_time - state.get('timestamp', 0) > 300]
+        for uid in expired:
+            metadata_states.pop(uid, None)
 class CallbackActions:
     @staticmethod
     async def handle_home(client: Client, query: CallbackQuery):
@@ -373,17 +430,43 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 'disable_web_page_preview': True
             }
         
-        elif data == "meta":
-            buttons = [
-                [InlineKeyboardButton("• ᴄʟᴏsᴇ", callback_data="close"), 
-                 InlineKeyboardButton("ʙᴀᴄᴋ •", callback_data="help")]
-            ]
-            response = {
-                'text': Txt.SEND_METADATA,
-                'reply_markup': InlineKeyboardMarkup(buttons),
-                'disable_web_page_preview': True
-            }
-        
+        # Metadata toggle handler
+        elif data in ["meta", "metadata_0", "metadata_1"]:
+            if data.startswith("metadata_"):
+                enable = data.endswith("_1")
+                await hyoshcoder.set_metadata(user_id, enable)
+            
+            bool_meta = await hyoshcoder.get_metadata(user_id)
+            meta_code = await hyoshcoder.get_metadata_code(user_id) or "Not set"
+            
+            await query.message.edit_text(
+                f"<b>Current Metadata:</b>\n\n➜ {meta_code}",
+                reply_markup=InlineKeyboardMarkup(METADATA_ON if bool_meta else METADATA_OFF)
+            )
+            await query.answer(f"Metadata {'enabled' if bool_meta else 'disabled'}")
+        elif data == "set_metadata":
+            try:
+                metadata_states[user_id] = {
+                    "waiting": True,
+                    "timestamp": time.time(),
+                    "original_msg": query.message.id
+                }
+                
+                prompt = await query.message.edit_text(
+                    "📝 <b>Send new metadata text</b>\n\n"
+                    "Example: <code>Telegram : @REQUETE_ANIME_30sbot</code>\n"
+                    f"Current: {await hyoshcoder.get_metadata_code(user_id) or 'None'}\n\n"
+                    "Reply with text or /cancel",
+                    reply_markup=InlineKeyboardMarkup(
+                        [[InlineKeyboardButton("❌ Cancel", callback_data="meta")]]
+                    )
+                )
+                
+                metadata_states[user_id]["prompt_id"] = prompt.id
+                
+            except Exception as e:
+                metadata_states.pop(user_id, None)
+                await query.answer(f"Error: {str(e)}", show_alert=True)
         elif data == "file_names":
             format_template = await codeflixbots.get_format_template(user_id) or "Not set"
             buttons = [
