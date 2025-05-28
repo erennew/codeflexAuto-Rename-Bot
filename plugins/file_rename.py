@@ -6,7 +6,7 @@ from datetime import datetime
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from helper.utils import progress_for_pyrogram, humanbytes, convert, extract_season_episode, extract_quality
-from database.data import hyoshcoder
+from database.data import codeflixbots
 from config import Config
 import os
 import time
